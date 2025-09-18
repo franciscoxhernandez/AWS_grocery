@@ -47,31 +47,29 @@ jwt_secret  = "your-jwt-secret"
 terraform init
 terraform apply
 ```
--Terraform will output:
+#### Terraform will output:
 	•	EC2 Public DNS
 	•	RDS Endpoint 
 
  ### 4. Populate the Database
- - After Terraform finishes, you must populate the RDS PostgreSQL with the schema and initial data:
-	1.	SSH into your EC2 instance:
+After Terraform finishes, you must populate the RDS PostgreSQL with the schema and initial data:
+1. SSH into your EC2 instance:
 ```bash
    	ssh ec2-user@<ec2-public-dns>
 ```
-  2.	Run the SQL import:
+2. Run the SQL import:
 ```bash
     	psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -f /home/ec2-user/AWS_grocery/backend/app/sqlite_dump_clean.sql
 ```
-•	<rds-endpoint>: Copy from Terraform output rds_endpoint.
-	    •	You will be prompted for the password (db_password from terraform.tfvars).
+•	<rds-endpoint>: Copy from Terraform output rds_endpoint. You will be prompted for the password (db_password from terraform.tfvars).
 
 ### 5. Verify data 
       ```bash
       psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM users;"
       psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM products;"
       ```
-
 ## Running the App
-The app is started automatically on EC2 boot.
+The app starts automatically on EC2 boot.
 If you need to restart manually:
       ```bash
       ssh ec2-user@<ec2-public-dns>
