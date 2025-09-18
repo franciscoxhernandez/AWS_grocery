@@ -151,7 +151,7 @@ python3 run.py
 
 ## 📖 Usage
 
-- Access the application at [http://localhost:5000](http://localhost:5000)
+- Access the application at [http://localhost:5006](http://localhost:5006) <-- This to work using MacOS
 - Register/Login to your account
 - Browse and search for products
 - Manage favorites and shopping basket
