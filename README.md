@@ -71,12 +71,12 @@ After Terraform finishes, you must populate the RDS PostgreSQL with the schema a
 ## Running the App
 The app starts automatically on EC2 boot.
 If you need to restart manually:
-      ```bash
-      ssh ec2-user@<ec2-public-dns>
-      cd AWS_grocery/backend
-      nohup python3 run.py 
-      ```
+```bash
+ssh ec2-user@<ec2-public-dns>
+cd AWS_grocery/backend
+nohup python3 run.py
+```
 Open in browser:
-      ```bash
-      http://<ec2-public-dns>:5006
-      ```
+```bash
+http://<ec2-public-dns>:5006
+```
