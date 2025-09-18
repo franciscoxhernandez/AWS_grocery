@@ -29,5 +29,16 @@ It combines infrastructure-as-code with application deployment for a reproducibl
 ```bash
 git clone https://github.com/franciscoxhernandez/AWS_grocery.git
 cd AWS_grocery/terraform-grocery
+```bash
+### 2. Configure Variables - Edit terraform.tfvars with your values:
+```bash
+region        = "eu-central-1"
+ami_id        = "ami-xxxxxx"     # Amazon Linux 2023 AMI
+instance_type = "t2.micro"
+key_name      = "your-ec2-keypair"
 
+db_name     = "grocerymate_db"
+db_user     = "grocery_user"
+db_password = "supersecret"
+jwt_secret  = "your-jwt-secret"
 
