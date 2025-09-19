@@ -80,4 +80,4 @@ Open in browser:
 http://<ec2-public-dns>:5006
 ```
 ---
-This repository and documentation were developed during the Masterschool program (2025), with special thanks to Alejandro Roman Ibanez.
+This repository and documentation were developed during the [Masterschool](https://de.masterschool.com/en/) program (2025), with special thanks to [Alejandro Roman Ibanez](https://github.com/AlejandroRomanIbanez).
