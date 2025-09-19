@@ -21,7 +21,7 @@ It combines infrastructure-as-code with application deployment for a reproducibl
   - Application runs on port **5006**
   - Reachable through EC2 Public DNS
 
----```bash
+---
 
 ## 🛠️ Setup Instructions
 
@@ -43,40 +43,39 @@ db_password = "supersecret"
 jwt_secret  = "your-jwt-secret"
 ```
 ### 3. Deploy Infrastructure
-```bash
+```
 terraform init
 terraform apply
 ```
 #### Terraform will output:
-	•	EC2 Public DNS
-	•	RDS Endpoint 
-
- ### 4. Populate the Database
+•	EC2 Public DNS
+•	RDS Endpoint 
+### 4. Populate the Database
 After Terraform finishes, you must populate the RDS PostgreSQL with the schema and initial data:
 1. SSH into your EC2 instance:
-```bash
-   	ssh ec2-user@<ec2-public-dns>
+```
+ssh ec2-user@<ec2-public-dns>
 ```
 2. Run the SQL import:
-```bash
-    	psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -f /home/ec2-user/AWS_grocery/backend/app/sqlite_dump_clean.sql
+```
+psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -f /home/ec2-user/AWS_grocery/backend/app/sqlite_dump_clean.sql
 ```
 •	<rds-endpoint>: Copy from Terraform output rds_endpoint. You will be prompted for the password (db_password from terraform.tfvars).
 
 ### 5. Verify data 
-      ```bash
-      psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM users;"
-      psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM products;"
-      ```
+```
+psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM users;"
+psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -c "SELECT COUNT(*) FROM products;"
+```
 ## Running the App
 The app starts automatically on EC2 boot.
 If you need to restart manually:
-```bash
+```
 ssh ec2-user@<ec2-public-dns>
 cd AWS_grocery/backend
 nohup python3 run.py
 ```
 Open in browser:
-```bash
+```
 http://<ec2-public-dns>:5006
 ```
