@@ -1,5 +1,39 @@
-.idea/aws.xml
+# IDE / Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+venv/
+.venv/
+
+# Flask logs / backups / local files
+backend/logs/
+backend/db_backup/
+backend/avatar/          # uploaded images should live in S3
+*.log
+
+# Node / React
+frontend/node_modules/
+frontend/build/
 frontend/frontend-build.zip
 frontend/temp_extract/
-frontend/src/config.js~
-venv/
+frontend/src/config.js~  # backup/temp files
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Secrets
+.env
+
+# Misc
+logfile
