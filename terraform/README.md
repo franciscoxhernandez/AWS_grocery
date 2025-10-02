@@ -28,7 +28,6 @@ It combines infrastructure-as-code with application deployment for a reproducibl
 ### 1. Clone Repo
 ```bash
 git clone https://github.com/franciscoxhernandez/AWS_grocery.git
-cd AWS_grocery/terraform
 ````
 ### 2. Configure Variables - Edit terraform.tfvars with your values:
 ```bash
