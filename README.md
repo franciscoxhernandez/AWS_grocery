@@ -16,7 +16,7 @@
 - [Prerequisites](#-prerequisites)
 - [Setup Instructions](#-setup-instructions)
 - [Application Configuration](#-application-configuration)
-- [Running the Application](#-running-the-application)
+- [Running the Application](#-running-the-application-)
 - [S3 Bucket Integration](#-s3-bucket-integration)
 - [Cleaning Up](#-cleaning-up)
 - [License](#-license)
@@ -75,7 +75,7 @@ Before starting, make sure you have the following installed:
 
 ---
 
-## ⚙️ Setup Instruction
+## ⚙️ Setup Instructions
 
 If you prefer a video walkthrough, watch this short tutorial: 
 
@@ -224,7 +224,7 @@ Confirm with yes when prompted.
 You can verify deletion in your AWS Console — under EC2 and RDS, the instances will no longer appear.
 ## 📜 License
 
-This project was developed as part of the [Masterschool](https://de.masterschool.com/en/) AI & Cloud Engineering program (2025).
+This project was developed as part of the [Masterschool](https://de.masterschool.com/en/) AI & Cloud Engineering program (2025),
 with special thanks to [Alejandro Roman Ibanez](https://github.com/AlejandroRomanIbanez).
 
 © 2025 Francisco Hernandez — MIT License.
