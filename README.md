@@ -81,6 +81,8 @@ If you prefer a video walkthrough, watch this short tutorial:
 
 🎬 [Tutorial Video](https://aws-masterschool-podcast-cloud-basics-hernandez-short-version.s3.eu-central-1.amazonaws.com/GitHub_AWS_grocery_tutorial.mp4)  
 
+Then follow the steps below to set up the project manually:
+
 ### 1️⃣ Clone the Repository
 ```
 git clone --branch version2 https://github.com/franciscoxhernandez/AWS_grocery.git
