@@ -36,6 +36,11 @@ It includes:
 This setup demonstrates a complete Infrastructure-as-Code (IaC) workflow for a cloud-native application.
 
 ---
+### 🧭 AWS Architecture Diagram 
+
+![AWS Architecture Diagram - AWS_grocery - AWS_grocery](https://github.com/user-attachments/assets/a8bd5414-a78a-4775-a8cd-2d17e501da2f)
+
+---
 
 ## 🛒 Features
 
@@ -71,6 +76,9 @@ Before starting, make sure you have the following installed:
 ---
 
 ## ⚙️ Setup Instruction
+
+If you prefer a video walkthrough, watch this short tutorial: 
+🎬 [Tutorial Video](https://aws-masterschool-podcast-cloud-basics-hernandez-short-version.s3.eu-central-1.amazonaws.com/GitHub_AWS_grocery_tutorial.mp4)  
 
 ### 1️⃣ Clone the Repository
 ```
