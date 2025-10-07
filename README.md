@@ -79,7 +79,7 @@ Before starting, make sure you have the following installed:
 
 If you prefer a video walkthrough, watch this short tutorial: 
 
-🎬 [Tutorial Video](https://aws-masterschool-podcast-cloud-basics-hernandez-short-version.s3.eu-central-1.amazonaws.com/GitHub_AWS_grocery_tutorial.mp4)  
+🎬 [Tutorial Video](https://aws-masterschool-podcast-cloud-basics-hernandez-short-version.s3.eu-central-1.amazonaws.com/GitHub_AWS_grocery_tutorial.mp4) → Video is hosted on a S3 🪣
 
 Then follow the steps below to set up the project manually:
 
