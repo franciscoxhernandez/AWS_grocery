@@ -78,6 +78,7 @@ Before starting, make sure you have the following installed:
 ## ⚙️ Setup Instruction
 
 If you prefer a video walkthrough, watch this short tutorial: 
+
 🎬 [Tutorial Video](https://aws-masterschool-podcast-cloud-basics-hernandez-short-version.s3.eu-central-1.amazonaws.com/GitHub_AWS_grocery_tutorial.mp4)  
 
 ### 1️⃣ Clone the Repository
