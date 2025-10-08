@@ -72,6 +72,7 @@ Before starting, make sure you have the following installed:
 - 🐘 **PostgreSQL** (client + access to AWS RDS)  
 - 🛠️ **Git** (for cloning this repository)  
 - ☁️ **Terraform** (>=1.5.0)
+- 🚀 **AWS CLI** (authenticating using SSO instead of traditional IAM user)
 
 ---
 
@@ -101,7 +102,20 @@ db_user     = "grocery_user"
 db_password = "your-db-password"
 jwt_secret  = "your-jwt-secret"
 ```
-### 3️⃣ Deploy the Infrastructure
+### 3️⃣ Logging in to AWS SSO to authenticate your session 
+To log in, on your terminal run: 
+```
+aws sso login
+```
+This will open a browser window prompting you to sign in. Use your SSO credentials provided by our AWS Organization.
+
+To confirm, that authentication was successful, try run:
+```
+aws sts get-caller-identity
+```
+This should return your AWS account details and the role you are assuming.
+
+### 4️⃣ Deploy the Infrastructure
 Run these commands in your terminal: 
 ```
 terraform init
@@ -115,13 +129,13 @@ After completion, you can verify resource creation on the **AWS Console**:
 - **RDS** →  PostgreSQL database
 - **S3**  →  Avatar storage bucket 
 
-### 4️⃣ Access Your Instance
+### 5️⃣ Access Your Instance
 Copy the **EC2 Public DNS** from the Terraform output and connect via SSH: 
 ```
 ssh -i "your-key.pem" ec2-user@<EC2-Public-DNS>
 ```
 
-### 5️⃣ Populate the Database
+### 6️⃣ Populate the Database
 inside your EC2 terminal:
 ```
 psql -h <rds-endpoint> -U grocery_user -d grocerymate_db -f /home/ec2-user/AWS_grocery/backend/app/sqlite_dump_clean.sql
